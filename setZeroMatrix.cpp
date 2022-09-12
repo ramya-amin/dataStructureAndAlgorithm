@@ -37,10 +37,7 @@ public:
                     {
                         col.push_back(j);
                         row.push_back(i);
-                    }
-
-            
-            
+                    }           
                  }
         
             // debug purpose         
@@ -65,10 +62,8 @@ public:
                     for(int k=0;k<col.size();k++)
                         for(int i=0;i<n; i++)
                         matrix[i][col[k]]=0;
-                }
-        
+                }        
         }      
-        
-        
+                
     }
 };
