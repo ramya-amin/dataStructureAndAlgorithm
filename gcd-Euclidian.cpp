@@ -16,6 +16,5 @@ public: int findGcd(int n, int m)
 int main(){
     numbers num;
     cout<<num.findGcd(3,4);
-
     return 0;
 }
