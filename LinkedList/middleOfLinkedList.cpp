@@ -28,7 +28,7 @@ class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
 
-        // fast and slow moving pointers 
+        // Fast and slow moving pointers approach
         // one pointer moves by and another moves by 2 steps
         // when the fast pointer meets NULL pointer(even) or if its next is NULL(odd no. elements), slow pointer would be pointing at the mid element 
 
