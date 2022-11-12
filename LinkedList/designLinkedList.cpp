@@ -30,22 +30,18 @@ class myList{
     //get the data in the given index number 
     int get(int index){
 
-        if(!head) return -1;
+        //if the index is out of bound then return -1 ; if head is NULL then also -1 
+        //else we have to traverse till index-1; so that when its index, loop exits and we can return
+        //currNode->data 
 
-        node* temp = new node();
-        temp = head;
-
-        int i=0;
-        while(temp && i <= index ){
-            if( i == index)
-                return temp->data;
-            else
-                temp=temp->next;
-                i++;
+        if(index >=size || index < 0 || head == NULL) return -1;
+        else
+        {
+            node* currNode = head;
+            for(int i=0;i<index; i++)
+                currNode = currNode -> next;
+            return currNode->data;
         }
-
-        return -1 ; // if the traversal reached NULL or out of bound index
-
 
 
     }
@@ -139,18 +135,21 @@ class myList{
 int main(){
     myList* l1 = new myList();
 
-    l1->addToHead(2);
-    l1->addToHead(10);
-        l1->addToHead(11);
+    l1->addToHead(1);
+    //l1->addToHead(10);
+      //  l1->addToHead(11);
 
-    l1->addAtTail(14);
-    l1->printList();
-    l1->addAtIndex(4,20);
-        l1->printList();
+    l1->addAtTail(3);
+    //l1->printList();
+    l1->addAtIndex(1,2);
+        //l1->printList();
+    cout<<endl<<l1->get(1);
+    l1->deleteAtIndex(1);
+    //l1->deleteAtIndex(3);
+    cout<<endl<<l1->get(1);
 
-    l1->deleteAtIndex(3);
 
-    cout<<'\n'<<"Index : ";
+    //cout<<'\n'<<"Index : ";
     //cout<<l1->get(1)<<endl;
     l1->printList();
 
