@@ -27,7 +27,8 @@ class Solution {
 public:
     ListNode* deleteMiddle(ListNode* head) {
         /*
-
+            Approach: 
+            
             Lets consider using slow/fast pointer method 
             slowPointer would be at the middle element when fast reached the end of the linked list 
 
